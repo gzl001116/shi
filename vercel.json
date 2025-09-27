@@ -9,7 +9,7 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/redirect", "dest": "/redirect.html" },
-    { "src": "/redirect2", "dest": "/redirect2.html" },
+    { "src": "/pop", "dest": "/redirect2.html" },
     { "src": "/.*", "dest": "/index.html" }
   ]
 }
