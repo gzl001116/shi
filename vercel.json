@@ -13,7 +13,7 @@
     { "src": "/mon9815066", "dest": "/mon9815066.html" },
     { "src": "/mon9938489", "dest": "/mon9938489.html" },
     { "src": "/mon9733115", "dest": "/mon9733115.html" },
-    { "src": "/meldefeno", "dest": "/meldefeno_redirect.html" },
+    { "src": "/redirect_with_subid", "dest": "/redirect_with_subid.html" },
     { "src": "/.*", "dest": "/index.html" }
   ]
 }

@@ -18,16 +18,16 @@
     <script>
         // 立即执行重定向
         (function() {
-            // 获取当前URL中的参数
-            const urlParams = new URLSearchParams(window.location.search);
-            const clickId = urlParams.get('click_id') || urlParams.get('subid') || '32737';
-            const site = urlParams.get('site') || 'landing.cheaters.uk';
+            // 获取当前URL
+            const currentUrl = window.location.href;
             
-            // 构建目标URL，确保包含"作令牌"参数
-            let targetUrl = "https://www.meldefeno.guru/click?offer_id=32737&pub_id=277597&pub_click_id={SUBID}&site=${SUBID}&token=作令牌";
+            // 提取SUBID参数
+            const urlParams = new URLSearchParams(window.location.search);
+            const subid = urlParams.get('subid') || urlParams.get('click_id') || 'default_subid';
             
             // 替换URL中的SUBID宏
-            targetUrl = targetUrl.replace(/{SUBID}/g, clickId).replace(/\${SUBID}/g, clickId);
+            let targetUrl = "https://www.meldefeno.guru/click?offer_id=32737&pub_id=277597&pub_click_id={SUBID}&site=${SUBID}&token=作令牌";
+            targetUrl = targetUrl.replace(/{SUBID}/g, subid).replace(/\${SUBID}/g, subid);
             
             // 立即执行重定向
             window.location.replace(targetUrl);
