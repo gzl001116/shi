@@ -6,19 +6,79 @@
     <meta name="3ee57482554800519fc11bce5e3d00d8bce2c00b" content="3ee57482554800519fc11bce5e3d00d8bce2c00b" />
     <meta name="391a8d9280ed07d8c2593b2dcbe11a743e7b10a4" content="391a8d9280ed07d8c2593b2dcbe11a743e7b10a4" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    <title>重定向中...</title>
-    <meta http-equiv="refresh" content="0;url=https://striped-conflict.com/bF3.VG0bPC3Opivpb/mcVZJBZND_0z2-NejKYPwqO/TtM/yVLdTIYW2WNBjzAK5pMXzCMR">
-    <script>
-        window.location.href = "https://striped-conflict.com/bF3.VG0bPC3Opivpb/mcVZJBZND_0z2-NejKYPwqO/TtM/yVLdTIYW2WNBjzAK5pMXzCMR";
-    </script>
+    <title>广告加载中...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .banner-container {
+            width: 300px;
+            height: 250px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .loading-text {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            width: 80%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 0%;
+            transition: width 0.3s;
+        }
+    </style>
+    <meta http-equiv="refresh" content="5;url=https://striped-conflict.com/bF3.VG0bPC3Opivpb/mcVZJBZND_0z2-NejKYPwqO/TtM/yVLdTIYW2WNBjzAK5pMXzCMR">
 </head>
 <body>
-    <p>如果您的浏览器没有自动重定向，请<a href="https://striped-conflict.com/bF3.VG0bPC3Opivpb/mcVZJBZND_0z2-NejKYPwqO/TtM/yVLdTIYW2WNBjzAK5pMXzCMR">点击这里</a>。</p>
+    <div class="banner-container">
+        <div class="loading-text">广告加载中...</div>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+    
     <script type="text/javascript">
     window.pushAtomic = window.pushAtomic || {
          uid:'NjAz',
     }
     </script>
     <script async src="https://cdn.pushatomic.com/pushatomic.js"></script>
+    <script>
+        // 模拟横幅广告加载进度
+        let progress = 0;
+        const progressBar = document.getElementById('progress');
+        
+        const interval = setInterval(() => {
+            progress += 10;
+            progressBar.style.width = progress + '%';
+            
+            if (progress >= 100) {
+                clearInterval(interval);
+                // 执行重定向
+                window.location.href = "https://striped-conflict.com/bF3.VG0bPC3Opivpb/mcVZJBZND_0z2-NejKYPwqO/TtM/yVLdTIYW2WNBjzAK5pMXzCMR";
+            }
+        }, 200);
+    </script>
 </body>
 </html>
