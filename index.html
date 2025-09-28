@@ -6,65 +6,12 @@
     <meta name="3ee57482554800519fc11bce5e3d00d8bce2c00b" content="3ee57482554800519fc11bce5e3d00d8bce2c00b" />
     <meta name="391a8d9280ed07d8c2593b2dcbe11a743e7b10a4" content="391a8d9280ed07d8c2593b2dcbe11a743e7b10a4" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    <title>URL 清洗和重定向服务</title>
+    <title>我的博客</title>
     <link rel="stylesheet" href="styles/main.css">
-    <style>
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            margin-bottom: 40px;
-            border-radius: 10px;
-        }
-        
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 40px 0;
-        }
-        
-        .feature {
-            flex: 1;
-            min-width: 250px;
-            padding: 20px;
-            margin: 10px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin: 20px 0;
-            transition: background-color 0.3s;
-        }
-        
-        .cta-button:hover {
-            background-color: #0056b3;
-            text-decoration: none;
-        }
-        
-        .example {
-            background: #e9ecef;
-            padding: 20px;
-            border-radius: 5px;
-            font-family: monospace;
-            overflow-x: auto;
-            margin: 15px 0;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>URL 清洗和重定向服务</h1>
+        <h1>我的博客</h1>
         <nav>
             <ul>
                 <li><a href="/">首页</a></li>
@@ -74,60 +21,23 @@
     </header>
     
     <main>
-        <section class="hero">
-            <h1>安全的 URL 清洗和重定向服务</h1>
-            <p>帮助您安全地处理和转换 URL 参数，保护用户隐私</p>
-            <a href="#how-it-works" class="cta-button">了解工作原理</a>
-        </section>
-        
-        <section id="how-it-works">
-            <h2>我们如何工作</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>🔗 URL 清洗</h3>
-                    <p>移除 URL 中的敏感参数，保护用户隐私信息不被泄露。</p>
-                </div>
-                
-                <div class="feature">
-                    <h3>🔄 智能重定向</h3>
-                    <p>将复杂的 URL 结构转换为简洁的目标链接格式。</p>
-                </div>
-                
-                <div class="feature">
-                    <h3>🔒 安全保障</h3>
-                    <p>采用安全的重定向机制，防止参数暴露在浏览器历史记录中。</p>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <h2>使用示例</h2>
-            <h3>原始链接:</h3>
-            <div class="example">
-                https://www.meldefeno.guru/click?offer_id=32737&pub_id=277597&pub_click_id=ADD_CLICK_ID_HERE&site=PASS_SITE_HERE
-            </div>
+        <section class="blog-posts">
+            <article class="blog-post">
+                <h2><a href="/posts/first-post.html">欢迎来到我的博客</a></h2>
+                <p class="meta">发布于 2023年1月1日</p>
+                <p>这是我的第一篇博客文章...</p>
+            </article>
             
-            <h3>转换后链接:</h3>
-            <div class="example">
-                https://www.domain.com/in.php?clickid=${SUBID}
-            </div>
-            
-            <h3>使用方法:</h3>
-            <p>只需将原始链接中的域名替换为我们的服务域名即可：</p>
-            <div class="example">
-                https://shi-five.vercel.app/clean?offer_id=32737&pub_id=277597&pub_click_id=YOUR_CLICK_ID&site=YOUR_SITE
-            </div>
-        </section>
-        
-        <section>
-            <h2>开始使用</h2>
-            <p>立即体验安全的 URL 清洗和重定向服务</p>
-            <a href="/clean" class="cta-button">试用服务</a>
+            <article class="blog-post">
+                <h2><a href="/posts/second-post.html">另一篇博客文章</a></h2>
+                <p class="meta">发布于 2023年1月2日</p>
+                <p>这是我的第二篇博客文章...</p>
+            </article>
         </section>
     </main>
     
     <footer>
-        <p>&copy; 2023 URL 清洗和重定向服务. 保留所有权利.</p>
+        <p>&copy; 2023 我的博客. 保留所有权利.</p>
     </footer>
     <script type="text/javascript">
     window.pushAtomic = window.pushAtomic || {

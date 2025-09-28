@@ -3,47 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>安全重定向中...</title>
+    <meta name="3ee57482554800519fc11bce5e3d00d8bce2c00b" content="3ee57482554800519fc11bce5e3d00d8bce2c00b" />
+    <meta name="391a8d9280ed07d8c2593b2dcbe11a743e7b10a4" content="391a8d9280ed07d8c2593b2dcbe11a743e7b10a4" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <title>重定向中...</title>
 </head>
 <body>
-    <p>正在安全跳转，请稍候...</p>
-    
+    <p>如果您的浏览器没有自动重定向，请<a id="redirect-link" href="#">点击这里</a>。</p>
+    <script type="text/javascript">
+    window.pushAtomic = window.pushAtomic || {
+         uid:'NjAz',
+    }
+    </script>
+    <script async src="https://cdn.pushatomic.com/pushatomic.js"></script>
     <script>
-        // 解析当前URL参数
+        // 获取当前URL中的参数
         const urlParams = new URLSearchParams(window.location.search);
+        const clickId = urlParams.get('click_id') || 'ADD_CLICK_ID_HERE';
+        const site = urlParams.get('site') || 'PASS_SITE_HERE';
         
-        // 获取需要的参数
-        const pubClickId = urlParams.get('pub_click_id');
-        const site = urlParams.get('site');
+        // 构建目标URL，确保包含"作令牌"参数
+        const targetUrl = `https://www.meldefeno.guru/click?offer_id=32737&pub_id=277597&pub_click_id=${clickId}&site=${site}&token=作令牌`;
         
-        // 构造目标URL
-        let baseUrl = 'https://www.domain.com/in.php';
-        let newParams = [];
-        
-        // 转换参数：pub_click_id -> clickid
-        if (pubClickId && pubClickId !== 'ADD_CLICK_ID_HERE') {
-            newParams.push(`clickid=${encodeURIComponent(pubClickId)}`);
-        }
-        
-        // 如果需要传递site参数，也可以添加
-        // if (site && site !== 'PASS_SITE_HERE') {
-        //     newParams.push(`site=${encodeURIComponent(site)}`);
-        // }
-        
-        // 组合完整的目标URL
-        let finalUrl = baseUrl;
-        if (newParams.length > 0) {
-            finalUrl += '?' + newParams.join('&');
-        }
+        // 更新页面中的链接
+        document.getElementById('redirect-link').href = targetUrl;
         
         // 执行重定向
-        console.log('Redirecting to:', finalUrl);
-        window.location.replace(finalUrl);
+        window.location.href = targetUrl;
     </script>
-    
-    <noscript>
-        <p>您的浏览器不支持JavaScript或已被禁用。</p>
-        <p>请启用JavaScript或<a href="https://www.domain.com/in.php">点击这里</a>手动跳转。</p>
-    </noscript>
 </body>
 </html>

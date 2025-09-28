@@ -13,14 +13,7 @@
     { "src": "/mon9815066", "dest": "/mon9815066.html" },
     { "src": "/mon9938489", "dest": "/mon9938489.html" },
     { "src": "/mon9733115", "dest": "/mon9733115.html" },
-    { "src": "/meldefeno", "dest": "/meldefeno_handler.html" },
-    { "src": "/clean", "dest": "/clean_redirect.html" },
-    { "src": "/offer", "dest": "/offer_redirect.html" },
-    { "src": "/direct", "dest": "/direct_redirect.html" },
-    { "src": "/start", "dest": "/start.html" },
-    { "src": "/whitelist", "dest": "/whitelist.html" },
-    { "src": "/cleaned", "dest": "/cleaned.html" },
-    { "src": "/in.php", "dest": "/in.php" },
+    { "src": "/meldefeno", "dest": "/meldefeno_redirect.html" },
     { "src": "/.*", "dest": "/index.html" }
   ]
 }
