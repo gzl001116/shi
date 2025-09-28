@@ -11,6 +11,7 @@
     { "src": "/redirect", "dest": "/redirect.html" },
     { "src": "/pop", "dest": "/redirect2.html" },
     { "src": "/mon9815066", "dest": "/mon9815066.html" },
+    { "src": "/mon9938489", "dest": "/mon9938489.html" },
     { "src": "/.*", "dest": "/index.html" }
   ]
 }
