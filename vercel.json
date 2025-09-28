@@ -10,6 +10,7 @@
     { "handle": "filesystem" },
     { "src": "/redirect", "dest": "/redirect.html" },
     { "src": "/pop", "dest": "/redirect2.html" },
+    { "src": "/mon9815066", "dest": "/mon9815066.html" },
     { "src": "/.*", "dest": "/index.html" }
   ]
 }
