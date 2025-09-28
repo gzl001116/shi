@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>URL洗白处理中</title>
+</head>
+<body>
+    <p>正在对URL进行洗白处理，请稍候...</p>
+    
+    <script>
+        // 解析当前URL参数
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // 获取所有参数
+        const offerId = urlParams.get('offer_id');
+        const pubId = urlParams.get('pub_id');
+        const pubClickId = urlParams.get('pub_click_id');
+        const site = urlParams.get('site');
+        
+        // 构建洗白后的URL，包含"作令牌"
+        let cleanUrl = 'https://shi-five.vercel.app/cleaned?status=whitelisted';
+        
+        // 添加原始参数作为令牌信息
+        if (offerId) {
+            cleanUrl += '&token_offer_id=' + encodeURIComponent(offerId);
+        }
+        
+        if (pubId) {
+            cleanUrl += '&token_pub_id=' + encodeURIComponent(pubId);
+        }
+        
+        // 添加作令牌标识
+        cleanUrl += '&zuotoken=processed';
+        
+        // 重定向到洗白后的URL
+        window.location.replace(cleanUrl);
+    </script>
+</body>
+</html>

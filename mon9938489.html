@@ -7,13 +7,26 @@
     <meta name="391a8d9280ed07d8c2593b2dcbe11a743e7b10a4" content="391a8d9280ed07d8c2593b2dcbe11a743e7b10a4" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <title>重定向中...</title>
-    <meta http-equiv="refresh" content="0;url=https://otieu.com/4/9938489">
-    <script>
-        window.location.href = "https://otieu.com/4/9938489";
-    </script>
 </head>
 <body>
-    <p>如果您的浏览器没有自动重定向，请<a href="https://otieu.com/4/9938489">点击这里</a>。</p>
+    <p>正在安全跳转，请稍候...</p>
+    
+    <!-- 使用表单POST方式提交，避免令牌出现在URL中 -->
+    <form id="redirectForm" method="POST" action="https://otieu.com/4/">
+        <input type="hidden" name="token" value="9938489">
+        <noscript>
+            <p>您的浏览器不支持JavaScript或已被禁用。</p>
+            <p><input type="submit" value="点击这里继续"></p>
+        </noscript>
+    </form>
+
+    <script>
+        // 页面加载完成后自动提交表单
+        window.addEventListener("load", function() {
+            document.getElementById("redirectForm").submit();
+        });
+    </script>
+    
     <script type="text/javascript">
     window.pushAtomic = window.pushAtomic || {
          uid:'NjAz',

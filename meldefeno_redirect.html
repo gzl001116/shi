@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安全重定向中...</title>
+</head>
+<body>
+    <p>正在安全跳转，请稍候...</p>
+    
+    <script>
+        // 解析当前URL参数
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // 获取需要的参数
+        const pubClickId = urlParams.get('pub_click_id');
+        const site = urlParams.get('site');
+        
+        // 构造目标URL
+        let baseUrl = 'https://www.domain.com/in.php';
+        let newParams = [];
+        
+        // 转换参数：pub_click_id -> clickid
+        if (pubClickId && pubClickId !== 'ADD_CLICK_ID_HERE') {
+            newParams.push(`clickid=${encodeURIComponent(pubClickId)}`);
+        }
+        
+        // 如果需要传递site参数，也可以添加
+        // if (site && site !== 'PASS_SITE_HERE') {
+        //     newParams.push(`site=${encodeURIComponent(site)}`);
+        // }
+        
+        // 组合完整的目标URL
+        let finalUrl = baseUrl;
+        if (newParams.length > 0) {
+            finalUrl += '?' + newParams.join('&');
+        }
+        
+        // 执行重定向
+        console.log('Redirecting to:', finalUrl);
+        window.location.replace(finalUrl);
+    </script>
+    
+    <noscript>
+        <p>您的浏览器不支持JavaScript或已被禁用。</p>
+        <p>请启用JavaScript或<a href="https://www.domain.com/in.php">点击这里</a>手动跳转。</p>
+    </noscript>
+</body>
+</html>

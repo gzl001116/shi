@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重定向中...</title>
+</head>
+<body>
+    <p>正在处理您的请求，请稍候...</p>
+    
+    <script>
+        // 解析当前URL参数
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // 获取offer_id参数
+        const offerId = urlParams.get('offer_id');
+        
+        // 构造目标URL
+        let targetUrl = 'https://shi-five.vercel.app/in.php';
+        
+        // 如果有offer_id参数，则用它作为clickid的值
+        if (offerId) {
+            targetUrl += '?clickid=' + encodeURIComponent(offerId);
+        } else {
+            // 默认值
+            targetUrl += '?clickid=32737';
+        }
+        
+        // 重定向到目标URL
+        window.location.replace(targetUrl);
+    </script>
+    
+    <noscript>
+        <p>您的浏览器不支持JavaScript或已被禁用。</p>
+        <p>请启用JavaScript或<a href="https://shi-five.vercel.app/in.php?clickid=32737">点击这里</a>手动跳转。</p>
+    </noscript>
+</body>
+</html>
