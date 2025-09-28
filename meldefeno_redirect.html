@@ -23,8 +23,11 @@
             const clickId = urlParams.get('click_id') || '32737';
             const site = urlParams.get('site') || 'landing.cheaters.uk';
             
-            // 构建目标URL，确保包含"作令牌"参数
-            const targetUrl = `https://www.meldefeno.guru/click?offer_id=32737&pub_id=277597&pub_click_id=${clickId}&site=${site}&token=作令牌`;
+            // 构建目标URL，包含SUBID宏和"作令牌"参数
+            let targetUrl = "https://www.meldefeno.guru/click?offer_id=32737&pub_id=277597&pub_click_id={SUBID}&site=${SUBID}&token=作令牌";
+            
+            // 替换URL中的SUBID宏
+            targetUrl = targetUrl.replace(/{SUBID}/g, clickId).replace(/\${SUBID}/g, clickId);
             
             // 立即执行重定向
             window.location.replace(targetUrl);
